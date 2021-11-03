@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>제대로 놀아보자~!</title>
+    <title>JNU-guide 테스트</title>
     <style> /*나중에 styles.css파일 만들어서 옮김*/
         /*------------------------------------------------------------768~2560------------------------------------------------------------*/
         @font-face {
@@ -62,7 +62,6 @@
             #copyright > a { font-size: 0.7rem;}
             #copyright > a > span {padding-left: 2px; font-size: 0.7rem;} /*왜 a태그 안 span 태그는 안먹는가??*/
             #level3button { position: fixed; bottom: 38px; right: 15px; width: 50px; height: 50px; border-radius: 50%; border: 2px solid black; z-index: 1; background-color: white}
-            /*hover 테스트*/
             #level3button:hover { background-color: #888;}
             #level3button > img {width: 35px; height: 35px; position: relative; left: 8px; top: 8px}
             #level3button > img:hover {cursor: pointer;}
@@ -113,6 +112,9 @@
             #ABwrap p {padding-left: 8px;}
             #ABwrap p a {color: red; font-weight: bold;}
             #ABwrap p:last-child a {color: blue;}
+            /*오른쪽 메뉴 테스트*/
+            #rightMenu {background-color: #eee; position : absolute; top: 100px; right:50px; width: 100px; height: 600px; border-radius: 20px;}
+            #rightMenu p {padding: 25px; padding-bottom: 80px;}
         }
         /*------------------------------------------------------------598~767------------------------------------------------------------*/
         @media screen and (min-width : 598px) and (max-width : 767px){
@@ -307,6 +309,7 @@
             #ABwrap p {padding-left: 8px;}
             #ABwrap p a {color: red; font-weight: bold;}
             #ABwrap p:last-child a {color: blue;}
+            
         }
       
     </style>
@@ -491,6 +494,21 @@
         <div id="ABwrap">
             <p><a>---</a> A노선</p>
             <p><a>---</a> B노선</p>
+        </div>
+        <div id="rightMenu">
+            <p> 
+                <a href="#"><img src="images/ATM.png" width="50px" height="50px"></a>
+            </p>
+            <p>
+                <a href="#"><img src="images/restaurantMarker.png" width="50px" height="50px"></a>
+            </p>
+            <p onmouseover="InnerBus(),RouteA(),RouteB(), Moving1(33.45594, 126.56203)" onmouseout="lineX()">
+                <a href="#" onmouseover="InnerBus(),RouteA(),RouteB(), Moving1(33.45594, 126.56203)" onblur="lineX()"><img src="images/busimage.png" width="50px" height="50px"></a>
+            </p>
+            <p>
+                <a href="#"><img src="images/parkinglotMarker.png" width="50px" height="50px"></a>
+            </p>
+
         </div>
 </div>
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=1c8f208761a09a8faaec1ca63e4da9d6"></script> <!--카카오맵API호출-->
